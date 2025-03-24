@@ -1,0 +1,60 @@
+* {
+    -youbkit-touch-callout: none;
+    -youbkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#navbarSupportedContent {
+    margin-right: 120px;
+}
+
+#signInButton {
+    margin-right: 10px;
+}
+
+#search {
+    margin-left: auto;
+    max-width: 300px;
+}
+
+.content {
+    margin: 12px;
+}
+
+.form-label {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#newPasteHeading {
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+#createPasteButton {
+    margin-left: 10px;
+    padding-left: 11px;
+}
+
+#exampleInputPaste {
+    resize: none;
+}
+
+.pasteSetting {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-label-setting {
+    margin-right: 10px;
+}
+
+#settings-table {
+    margin-top: 8px;
+}
+
+#pasteName {
+    max-width: 250px;
+}
