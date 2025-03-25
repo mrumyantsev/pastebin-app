@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: pb-postgres
+    hostname: pb-postgres
+    restart: unless-stopped
+    image: postgres:${POSTGRES_VERSION}-alpine${ALPINE_VERSION}
+    environment:
+      - POSTGRES_USER=${POSTGRES_DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_DATABASE_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DATABASE_NAME}
+      - PGDATA=/data
+    volumes:
+      - ${POSTGRES_DATABASE_LOCAL_DIR}:/data
+    networks:
+      - pb-internal-network
+    ports:
+      - ${POSTGRES_DATABASE_PORT}:5432
+
+  mongo:
+    container_name: pb-mongo
+    hostname: pb-mongo
+    restart: unless-stopped
+    image: mongo:${MONGO_VERSION}-rc1-jammy
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_DATABASE_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_DATABASE_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE_NAME}
+    volumes:
+      - ${MONGO_DATABASE_LOCAL_DIR}:/data/db
+    networks:
+      - pb-internal-network
+    ports:
+      - ${MONGO_DATABASE_PORT}:27017
+
+  server:
+    container_name: pb-server
+    hostname: pb-server
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - mongo
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - GOLANG_VERSION=${GOLANG_VERSION}
+        - ALPINE_VERSION=${ALPINE_VERSION}
+        - APP_NAME=${SERVER_APP_NAME}
+    env_file:
+      - ./.env
+    networks:
+      - pb-internal-network
+      - pb-external-network
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+
+  web:
+    container_name: pb-web
+    hostname: pb-web
+    restart: unless-stopped
+    depends_on:
+      - server
+    image: nginx:${NGINX_VERSION}-alpine${ALPINE_VERSION}
+    volumes:
+      - ${WEB_LOCAL_DIR}:/usr/share/nginx/html
+    networks:
+      - pb-external-network
+    ports:
+      - ${WEB_PORT}:80
+
+networks:
+  pb-internal-network:
+    name: pb-internal-network
+    driver: bridge
+    internal: true
+
+  pb-external-network:
+    name: pb-external-network
+    driver: bridge
+    internal: false
