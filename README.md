@@ -5,10 +5,10 @@ Pastebin is a web application where anyone can store any text online for easy sh
 ![Pastebin](./pastebin-web-ui.png)
 *Pastebin Web Interface*
 
+The maximum size a paste can be is 512 kilobytes (0.5 megabytes). This is should be enough for almost any piece of text or script, and it prevents people from jamming the backend servers. Loggined users can edit or delete anything they pasted and also allowed to create pastes up to 10 megabytes. Expired pastes will be removed permanently.
+
 ![Architecture](./pastebin-arch-diagram.png)
 *Pastebin Architecture Diagram*
-
-The maximum size a paste can be is 512 kilobytes (0.5 megabytes). This is should be enough for almost any piece of text or script, and it prevents people from jamming the backend servers. Loggined users can edit or delete anything they pasted and also allowed to create pastes up to 10 megabytes. Expired pastes will be removed permanently.
 
 ## Features
 
