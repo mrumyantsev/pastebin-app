@@ -9,14 +9,14 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
-type BodylessLogger struct {
+type Logger struct {
 }
 
-func NewBodylessLogger() *BodylessLogger {
-	return &BodylessLogger{}
+func NewLogger() *Logger {
+	return &Logger{}
 }
 
-func (l *BodylessLogger) Middleware() gin.HandlerFunc {
+func (l *Logger) Middleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		now := time.Now()
 

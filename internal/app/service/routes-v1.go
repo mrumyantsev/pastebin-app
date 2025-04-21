@@ -14,15 +14,12 @@ func (a *App) initRoutesV1() error {
 	pasteHandler := paste.NewHttpHandler(a.services.Paste)
 
 	// Middleware
-	jsonBodyCleaner := middleware.NewJsonBodyCleaner()
-	restyLogger := middleware.NewRestyLogger()
-	bodylessLogger := middleware.NewBodylessLogger()
+	logger := middleware.NewLogger()
 	userAuthorization := middleware.NewUserAuthorization()
 
 	// Routes
 	auth := a.server.AlignedGroup(
-		jsonBodyCleaner.Middleware(),
-		restyLogger.Middleware(),
+		logger.Middleware(),
 	)
 	{
 		auth.POST____("/v1/auth/sign-up", authHandler.SignUp)
@@ -30,8 +27,7 @@ func (a *App) initRoutesV1() error {
 	}
 
 	users := a.server.AlignedGroup(
-		jsonBodyCleaner.Middleware(),
-		restyLogger.Middleware(),
+		logger.Middleware(),
 		userAuthorization.Middleware(),
 	)
 	{
@@ -44,7 +40,7 @@ func (a *App) initRoutesV1() error {
 	}
 
 	pastes := a.server.AlignedGroup(
-		bodylessLogger.Middleware(),
+		logger.Middleware(),
 		userAuthorization.Middleware(),
 	)
 	{
