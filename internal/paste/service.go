@@ -3,7 +3,7 @@ package paste
 import (
 	"context"
 
-	"github.com/mrumyantsev/base64conv-go"
+	"github.com/mrumyantsev/go-base64conv"
 )
 
 type Service struct {

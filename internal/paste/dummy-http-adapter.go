@@ -3,7 +3,7 @@ package paste
 import (
 	"context"
 
-	"github.com/mrumyantsev/base64conv-go"
+	"github.com/mrumyantsev/go-base64conv"
 	"github.com/mrumyantsev/pastebin-app/internal/database"
 )
 

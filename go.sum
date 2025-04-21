@@ -70,10 +70,10 @@ github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd h1:TRLaZ9cD/w
 github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=
 github.com/modern-go/reflect2 v1.0.2 h1:xBagoLtFs94CBntxluKeaWgTMpvLxC4ur3nMaC9Gz0M=
 github.com/modern-go/reflect2 v1.0.2/go.mod h1:yWuevngMOJpCy52FWWMvUC8ws7m/LJsjYzDa0/r8luk=
-github.com/mrumyantsev/base64conv-go v1.0.0 h1:3PonX4ElrCXXnY0bV6HKXnzrG1Aom+JvE8AfFsvm6xA=
-github.com/mrumyantsev/base64conv-go v1.0.0/go.mod h1:yPbTsktaIWcc2ffbShIAzjh52T2iW8IUjJXr93MSfck=
-github.com/mrumyantsev/errlib-go v1.0.1 h1:LcmPZRRy3wjB+pIFRh9CrqV4KsUEGmnm/7oh/GvAabo=
-github.com/mrumyantsev/errlib-go v1.0.1/go.mod h1:x/xnFuReoS3QoMQowG4T+WWv3UWCn86tZLYYqCs9gWY=
+github.com/mrumyantsev/go-base64conv v1.0.1 h1:YktZvvg4BJGEVDitsatLdSxPjWulEL45DRh7ylJl7Vg=
+github.com/mrumyantsev/go-base64conv v1.0.1/go.mod h1:trlojfzDgqH3TYxtDeh2A7Rc3XBNE5OMUTvlwteP6IM=
+github.com/mrumyantsev/go-errlib v1.0.2 h1:TzlnUcpmFyw/5Rx088meDx5ugd7IqZIQsyx7+oFJ+2c=
+github.com/mrumyantsev/go-errlib v1.0.2/go.mod h1:PrxWlhzcij0P5eiSeZoBTow9WJtOyi7/UrSakxqYK1M=
 github.com/pelletier/go-toml/v2 v2.2.3 h1:YmeHyLY8mFWbdkNWwpr+qIL2bEqT0o95WSdkNHvL12M=
 github.com/pelletier/go-toml/v2 v2.2.3/go.mod h1:MfCQTFTvCcUyyvvwm1+G6H/jORL20Xlb6rzQu9GuUkc=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

@@ -7,8 +7,6 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/jackc/pgx/v5 v5.7.2
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/mrumyantsev/base64conv-go v1.0.0
-	github.com/mrumyantsev/errlib-go v1.0.1
 	github.com/rs/zerolog v1.33.0
 	go.mongodb.org/mongo-driver/v2 v2.1.0
 	golang.org/x/crypto v0.33.0
@@ -37,6 +35,8 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/mrumyantsev/go-base64conv v1.0.1 // indirect
+	github.com/mrumyantsev/go-errlib v1.0.2 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.3 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect

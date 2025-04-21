@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mrumyantsev/base64conv-go"
-	"github.com/mrumyantsev/errlib-go"
+	"github.com/mrumyantsev/go-base64conv"
+	"github.com/mrumyantsev/go-errlib"
 	"github.com/mrumyantsev/pastebin-app/internal/server"
 )
 

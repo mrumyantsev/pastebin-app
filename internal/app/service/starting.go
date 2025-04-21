@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/mrumyantsev/errlib-go"
+	"github.com/mrumyantsev/go-errlib"
 	"github.com/rs/zerolog/log"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/mrumyantsev/errlib-go"
+	"github.com/mrumyantsev/go-errlib"
 )
 
 func (a *App) shutdown(ctx context.Context) error {

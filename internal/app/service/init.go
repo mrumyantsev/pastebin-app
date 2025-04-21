@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/mrumyantsev/errlib-go"
+	"github.com/mrumyantsev/go-errlib"
 	"github.com/mrumyantsev/pastebin-app/internal/auth"
 	"github.com/mrumyantsev/pastebin-app/internal/database"
 	"github.com/mrumyantsev/pastebin-app/internal/paste"
