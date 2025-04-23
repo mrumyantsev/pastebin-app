@@ -22,19 +22,66 @@ The maximum size a paste can be is 512 kilobytes (0.5 megabytes). This is should
 
 - [Docker](https://docs.docker.com/desktop/linux/install/)
 
-## Installation
+## Usage
 
-Compile and run.
+Build the project with Docker Compose.
 
 ```
 make
+```
+
+Run the project with Docker Compose.
+
+```
 make run
+```
+
+Build backend service locally (build the binary).
+
+```
+make build-local
+```
+
+Run backend service locally (run the binary).
+
+```
+make run-local
+```
+
+Run backend service in a temporary directory (fast).
+
+```
+make run-fast
 ```
 
 ## Testing
 
-Run the unit-tests.
+Run all the unit-tests.
 
 ```
 make test
+```
+
+Build a PostgreSQL container with Docker.
+
+```
+make build-postgres-container
+```
+
+Build a MongoDB container with Docker.
+
+```
+make build-mongo-container
+```
+
+Run a PostgreSQL container with Docker.
+
+```
+make run-postgres-container
+```
+
+Run a MongoDB container with Docker.
+
+```
+make run-mongo-container
 ```
